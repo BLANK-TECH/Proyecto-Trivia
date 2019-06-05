@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+    <title>Trivia</title>
+  <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body class="bodyprincipal">
+    <h1>¡¡ Bienvenid@ a Trivia !!</h1>
+      <h2 style="color:red">Si estas list@ para jugar escribe tu nombre</h2>
+    <p></p>
+<!--formulario pantalla principal-->
+    <form name='botones'id="formularioBotones">
+    <input type="text" id="input-text"><br>
+    <button type="button" id="button1-send">Enviar</button><br>
+      <p id='Name'></p>
+    </form>
+      <script type="text/javascript">
+const inputText = document.getElementById("input-text");
+const button1Send = document.getElementById("button1-send");
+const Name = document.getElementById('Name');
+
+button1Send.addEventListener("click", nombre)
+
+//llama la funcion nombre
+function nombre(e){
+  Name.innerHTML = "Hola " + inputText.value;
+  location.href="categorias.html"
+  localStorage.setItem("name", inputText.value);
+}
+      </script>
+  </body>
+</html>
