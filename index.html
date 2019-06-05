@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
     <title>Trivia</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="index.css">
   </head>
   <body class="bodyprincipal">
     <h1>¡¡ Bienvenid@ a Trivia !!</h1>
@@ -13,18 +13,19 @@
     <form name='botones'id="formularioBotones">
     <input type="text" id="input-text"><br>
     <button type="button" id="button1-send">Enviar</button><br>
-      <p id='Name'></p>
+    <p id='mostrarName'></p>
     </form>
       <script type="text/javascript">
 const inputText = document.getElementById("input-text");
 const button1Send = document.getElementById("button1-send");
-const Name = document.getElementById('Name');
+
 
 button1Send.addEventListener("click", nombre)
 
 //llama la funcion nombre
 function nombre(e){
-  Name.innerHTML = "Hola " + inputText.value;
+  const name = document.getElementById('mostrarName');
+  name.innerHTML = "Hola " + inputText.value;
   location.href="categorias.html"
   localStorage.setItem("name", inputText.value);
 }

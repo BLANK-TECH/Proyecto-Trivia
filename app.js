@@ -2,7 +2,7 @@ const buttonSend = document.getElementById("button-send");
 buttonSend.addEventListener("click", correct)
 const inputsAnswer= Array.from(document.getElementsByClassName("datos"));
 
-function correct(e){
+function correct(){
   let score=0;
   for(let i=0; i < inputsAnswer.length; i++){
     if(inputsAnswer[i].checked){
