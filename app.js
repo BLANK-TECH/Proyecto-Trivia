@@ -1,3 +1,12 @@
+fetch('https://opentdb.com/api.php?amount=20')
+.then((respuesta) =>{
+  console.log(respuesta);
+  return respuesta.json();
+}).then((respuesta) =>{
+  document.getElementById('question').textContent = respuesta.results.question;
+})
+
+
 const buttonSend = document.getElementById("button-send");
 buttonSend.addEventListener("click", correct)
 const inputsAnswer= Array.from(document.getElementsByClassName("datos"));
