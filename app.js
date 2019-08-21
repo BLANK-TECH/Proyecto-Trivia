@@ -2,11 +2,24 @@ fetch('https://opentdb.com/api.php?amount=20')
 .then((respuesta) =>{
   console.log(respuesta);
   return respuesta.json();
-}).then((respuesta) =>{
-  document.getElementById('question').textContent = respuesta.results.question;
+}).then((resp) =>{
+  const data = resp.results
+  printData(data)
+  // document.getElementById('question').textContent = resp.results[0].question;
 })
+.catch(err => console.error(err))
 
 
+
+const printData= (data) =>{
+  console.log(data);
+} 
+// .then(resp => resp.json())
+// .then((respuesta) =>{
+//   console.log(respuesta)
+//   document.getElementById('question').textContent = respuesta.results.question;
+// })
+// .catch(err => console.error(err))
 const buttonSend = document.getElementById("button-send");
 buttonSend.addEventListener("click", correct)
 const inputsAnswer= Array.from(document.getElementsByClassName("datos"));

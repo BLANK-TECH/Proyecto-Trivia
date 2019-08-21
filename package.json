@@ -1,0 +1,35 @@
+{
+  "name": "proyecto-trivia",
+  "version": "1.0.0",
+  "description": "trivia",
+  "main": "app.js",
+  "scripts": {
+    "htmlhint": "htmlhint dist/*.html ",
+    "eslint": "eslint --ext .js src/ test/",
+    "pretest": "npm run htmlhint && npm run eslint",
+    "test": "jest --coverage",
+    "start": "serve src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BLANK-TECH/Proyecto-Trivia.git"
+  },
+  "author": "Blanca Garduño",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BLANK-TECH/Proyecto-Trivia/issues"
+  },
+  "homepage": "https://github.com/BLANK-TECH/Proyecto-Trivia#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-jest": "^22.1.2",
+    "htmlhint": "^0.11.0",
+    "jest": "^24.8.0",
+    "regenerator-runtime": "^0.13.1",
+    "serve": "^11.0.2"
+  }
+}
