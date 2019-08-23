@@ -2,39 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <!-- BOOTSTRAP 4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
     <title>Trivia</title>
   </head>
   <body>
-    <section class="container">
-
-      <header class="row">
-        <h6 class="col-12 col-sm-12 col-xl-3">¡¡ Welcome to Trivia !!</h6>
-        <nav class="col-12 col-sm-12 col-xl-9">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active " href="#">How to Play</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Support</a>
-            </li>
-          </ul>
+  <section id="home">
+    <header>
+    <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><img src="./Imagenes/logo.jpg"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link" href="#">How to play</a>
+              <a class="nav-item nav-link" href="#">About</a>
+              <a class="nav-item nav-link active" href="#">Help</a>
+            </div>
+          </div>
         </nav>
       </header>
-
-    </section>
+    <!-- SECCION INICIO -->
+    <section class="section-start" id="section-start">
+        <article class="ml-auto">
+          <figure>
+            <img src="./Imagenes/logo.jpg" alt="#">
+          </figure>
+          <p>¡Disfruta desafiendo tu conocimiento,<br>
+            pon a prueba tu cerebro!</p>
+          <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+              Start
+            </button>
+        </article>
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Choose your UserName</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" placeholder="Recipient's username">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="start">Start</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+      </section>
     
-      <!--<h2 style="color:red">Si estas list@ para jugar escribe tu nombre</h2>
-    <p></p> -->
-<!-- formulario pantalla principal
+    </section>
+
+    <section id="section-home">
+          <div class="input-group ml-3 select">
+              <div class="input-group-prepend">
+                <label class="input-group-text mt-4" for="inputGroupSelect01">Category</label>
+              </div>
+                <select class="custom-select mt-4" id="inputGroupSelect01">
+                  <option selected></option>
+                  <option value="esasy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+              </select>
+            </div>
+      <main id="questions">
+
+      </main>     
+    </section>
+  </main>
+
+    
+      <!-- <h2 style="color:red">Si estas list@ para jugar escribe tu nombre</h2>
+    <p></p>
+formulario pantalla principal
     <form name='botones'id="formularioBotones">
     <input type="text" id="input-text"><br>
     <button type="button" id="button1-send">Enviar</button><br>
@@ -55,6 +106,7 @@ function nombre(e){
   localStorage.setItem("name", inputText.value);
 }
       </script> -->
+    <script type="text/javascript" src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
